@@ -53,24 +53,24 @@
   background: linear-gradient(to top, rgba(5,5,5,1) 0%, transparent 100%);
 }
 
-/* ── Logo — upper center of video ── */
+/* ── Logo — absolute, centered in video area ── */
 .logoWrap {
   position: absolute;
-  top: 28%;
+  top: 38%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
   pointer-events: none;
 }
 .logoImg {
-  width: clamp(120px, 14vw, 200px);
-  height: clamp(120px, 14vw, 200px);
+  width: clamp(180px, 22vw, 300px);
+  height: clamp(180px, 22vw, 300px);
   object-fit: contain;
   display: block;
   filter:
-    drop-shadow(0 0 80px rgba(0,173,239,0.55))
-    drop-shadow(0 0 30px rgba(255,255,255,0.18))
-    brightness(1.15);
+    drop-shadow(0 0 60px rgba(0,173,239,0.5))
+    drop-shadow(0 0 20px rgba(255,255,255,0.15))
+    brightness(1.12);
 }
 
 /* ── Bottom content ── */

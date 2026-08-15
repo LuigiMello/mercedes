@@ -57,7 +57,7 @@ export default function Hero() {
         <div className={styles.ovBottom} />
       </div>
 
-      {/* ── Mercedes logo — GIANT centered ── */}
+      {/* ── Logo — centered in video ── */}
       <div className={styles.logoWrap} ref={logoRef}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
