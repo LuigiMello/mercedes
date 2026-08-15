@@ -47,16 +47,16 @@ export default function Hero() {
         <div className={styles.ovBottom} />
       </div>
 
+      {/* ── Logo — centered in hero ── */}
+      <div ref={logoRef} className={styles.logoWrap}>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/Mercedes-Logo.svg.webp" alt="Mercedes-Benz" className={styles.logoImg} />
+      </div>
+
       {/* ── Bottom content ── */}
       <div className={styles.content} ref={contentRef}>
         {/* Left: headline */}
         <div className={styles.left}>
-          {/* Logo above Since 1886 tag */}
-          <div ref={logoRef} className={styles.logoWrap}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/Mercedes-Logo.svg.webp" alt="Mercedes-Benz" className={styles.logoImg} />
-          </div>
-
           <p className={styles.tag} data-h-tag>
             <span className={styles.tagLine} />
             Since 1886 — Stuttgart
