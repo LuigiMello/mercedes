@@ -1,9 +1,9 @@
 'use client';
 import { useEffect, useRef } from 'react';
+
 import styles from './Hero.module.css';
 
 export default function Hero() {
-  const logoRef    = useRef(null);
   const contentRef = useRef(null);
 
   /* GSAP entrance */
@@ -45,12 +45,6 @@ export default function Hero() {
         <div className={styles.ovGrad}   />
         <div className={styles.ovDark}   />
         <div className={styles.ovBottom} />
-      </div>
-
-      {/* ── Logo — centered in hero ── */}
-      <div ref={logoRef} className={styles.logoWrap}>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/Mercedes-Logo.svg.webp" alt="Mercedes-Benz" className={styles.logoImg} />
       </div>
 
       {/* ── Bottom content ── */}
