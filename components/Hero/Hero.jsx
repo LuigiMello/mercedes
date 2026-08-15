@@ -1,6 +1,8 @@
 'use client';
 import { useEffect, useRef } from 'react';
 
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
+
 import styles from './Hero.module.css';
 
 export default function Hero() {
@@ -37,7 +39,7 @@ export default function Hero() {
       {/* ── Video background ── */}
       <div className={styles.videoBg}>
         <video
-          src="/meca.mp4"
+          src={`${BASE}/meca.mp4`}
           autoPlay muted loop playsInline
           className={styles.video}
         />

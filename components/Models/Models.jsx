@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from 'react';
 import styles from './Models.module.css';
 
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
 const CONFIGURATOR = 'https://www2.mercedes-benz.com.br/passengercars/configurator.html?filters=';
 
 const MODELS = [
@@ -37,7 +38,7 @@ const MODELS = [
     tagline: 'O futuro é silencioso.',
     price: 'A partir de R$ 540.000',
     accent: '#00d4aa',
-    img: '/eqs.jpg',          /* imagem local da pasta public */
+    img: `${BASE}/eqs.jpg`,
     specs: [
       { l: 'Autonomia', v: '770 km' },
       { l: 'Potência',  v: '658 cv' },

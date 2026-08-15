@@ -2,6 +2,8 @@
 import { useEffect, useRef, useState } from 'react';
 import styles from './Navbar.module.css';
 
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
+
 const links = [
   { label: 'Modelos',    href: '#models' },
   { label: 'Inovação',   href: '#innovation' },
@@ -29,7 +31,7 @@ export default function Navbar() {
         {/* Logo */}
         <a href="#hero" className={styles.logo}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/Mercedes-Logo.svg.webp" alt="Mercedes-Benz" className={styles.logoIcon} />
+          <img src={`${BASE}/Mercedes-Logo.svg.webp`} alt="Mercedes-Benz" className={styles.logoIcon} />
           <span className={styles.logoText}>Mercedes‑Benz</span>
         </a>
 

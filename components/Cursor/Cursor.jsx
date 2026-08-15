@@ -1,6 +1,8 @@
 'use client';
 import { useEffect, useRef } from 'react';
 
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
+
 export default function Cursor() {
   const cursorRef = useRef(null);
   const xRef = useRef(window?.innerWidth  / 2 || 0);
@@ -56,7 +58,7 @@ export default function Cursor() {
   return (
     <div ref={cursorRef} className="mb-cursor">
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src="/Mercedes-Logo.svg.webp" alt="" aria-hidden="true" />
+      <img src={`${BASE}/Mercedes-Logo.svg.webp`} alt="" aria-hidden="true" />
     </div>
   );
 }
