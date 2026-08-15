@@ -18,22 +18,12 @@ export default function Hero() {
       ctx = gsap.context(() => {
         const tl = gsap.timeline({ delay: 0.15 });
 
-        /* Only transform animations — no opacity — reliable with StrictMode */
-        tl.fromTo(logoRef.current,
-          { scale: 0.45 },
-          { scale: 1, duration: 1.8, ease: 'expo.out' }
-        )
-        .from('[data-h-tag]',    { y: 22, duration: 0.6, ease: 'power3.out' }, '-=0.9')
-        .from('[data-h-line]',   { y: 48, duration: 0.8, stagger: 0.1, ease: 'power3.out' }, '-=0.4')
-        .from('[data-h-sub]',    { y: 22, duration: 0.6, ease: 'power3.out' }, '-=0.3')
-        .from('[data-h-btn]',    { y: 16, duration: 0.5, stagger: 0.1, ease: 'power3.out' }, '-=0.3')
-        .from('[data-h-stat]',   { y: 16, duration: 0.5, stagger: 0.08, ease: 'power3.out' }, '-=0.3')
-        .from('[data-h-scroll]', { y: 10, duration: 0.5 }, '-=0.2');
-
-        gsap.to(logoRef.current, {
-          scale: 1.04, duration: 3.5, ease: 'sine.inOut',
-          yoyo: true, repeat: -1, delay: 2,
-        });
+        tl.from('[data-h-tag]',    { y: 22, duration: 0.6, ease: 'power3.out' })
+          .from('[data-h-line]',   { y: 48, duration: 0.8, stagger: 0.1, ease: 'power3.out' }, '-=0.4')
+          .from('[data-h-sub]',    { y: 22, duration: 0.6, ease: 'power3.out' }, '-=0.3')
+          .from('[data-h-btn]',    { y: 16, duration: 0.5, stagger: 0.1, ease: 'power3.out' }, '-=0.3')
+          .from('[data-h-stat]',   { y: 16, duration: 0.5, stagger: 0.08, ease: 'power3.out' }, '-=0.3')
+          .from('[data-h-scroll]', { y: 10, duration: 0.5 }, '-=0.2');
       });
     };
 
@@ -57,20 +47,16 @@ export default function Hero() {
         <div className={styles.ovBottom} />
       </div>
 
-      {/* ── Logo — centered in video ── */}
-      <div className={styles.logoWrap} ref={logoRef}>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="/Mercedes-Logo.svg.webp"
-          alt="Mercedes-Benz"
-          className={styles.logoImg}
-        />
-      </div>
-
       {/* ── Bottom content ── */}
       <div className={styles.content} ref={contentRef}>
         {/* Left: headline */}
         <div className={styles.left}>
+          {/* Logo above Since 1886 tag */}
+          <div ref={logoRef} className={styles.logoWrap}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/Mercedes-Logo.svg.webp" alt="Mercedes-Benz" className={styles.logoImg} />
+          </div>
+
           <p className={styles.tag} data-h-tag>
             <span className={styles.tagLine} />
             Since 1886 — Stuttgart
