@@ -1,0 +1,31 @@
+.wrap {
+  overflow: hidden;
+  background: var(--dark);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 22px 0;
+}
+
+.track {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  white-space: nowrap;
+  width: max-content;
+}
+
+.word {
+  font-size: 0.82rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(244,244,244,0.48);
+  padding: 0 32px;
+  transition: color 0.3s;
+}
+.word:hover { color: var(--white); }
+
+.dot {
+  font-size: 0.5rem;
+  color: var(--blue);
+  padding: 0 4px;
+}
